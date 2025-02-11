@@ -1,0 +1,3 @@
+Which database was used for the multiple sequence alignment (MSA) searches in AlphaFold?
+What were the results of AlphaFold's performance in CASP14?
+What are the main components of AlphaFold’s neural network architecture?
