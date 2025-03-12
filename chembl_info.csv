@@ -1,0 +1,158 @@
+chembl_id,description
+CHEMBL1032408,Antagonist activity at human mGluR5 expressed in CHO cells assessed as calcium flux by FLIPR assay
+CHEMBL1032756,Agonist activity at human mGluR5 transiently transfected in BHK cells assessed as potentiation of L-glutamate-induced calcium flux by FLIPR assay
+CHEMBL1032762,Displacement of [3H]MPEP from human recombinant mGluR5 expressed in BHK cells at by radioligand binding assay
+CHEMBL1038284,Antagonist activity at human mGluR5 receptor expressed in CHO cell membranes assessed as inhibition of L-glutamate-induced calcium mobilization by FLIPR
+CHEMBL1046438,Antagonist activity at human mGluR5 receptor expressed in CHO cells by FLIPR assay
+CHEMBL1052809,Antagonist activity at human recombinant GluR5 expressed in HEK cells coexpressing aequorine assessed as inhibition of glutamate-induced Ca2+ influx by luminescence reporter assay
+CHEMBL1065281,Antagonist activity at human mGluR5 assessed as inhibition of glutamate-induced elevation of intracellular calcium concentration
+CHEMBL1065282,Antagonist activity at human mGluR5 assessed as inhibition of quisqualate-induced intracellular inositol phosphate accumulation
+CHEMBL1065286,Displacement of [3H]ABP688 from human recombinant mGluR5 expressed in CHO cells
+CHEMBL1118810,Binding affinity to human mGluR5
+CHEMBL1259400,Modulation of human recombinant mGluR5 expressed in CHO cells assessed as inhibition of glutamate-induced response
+CHEMBL1292091,Displacement of [3H]-MPEP from human mGluR5
+CHEMBL1292204,Positive allosteric modulation of human mGluR5 expressed in HEK293 cells assessed as Ca2+ influx by FLIPR assay
+CHEMBL1639082,Antagonist activity at human mGluR5 expressed in CHO cells assessed as doxycycline induced calcium mobilization
+CHEMBL1680466,Antagonist activity at human mGlu5 receptor assessed as inhibition of glutamate-induced calcium flux by cell based assay
+CHEMBL1680469,Displacement of [3H]ABP688 from human recombinant mGlu5 receptor
+CHEMBL1685174,Positive allosteric modulation of human mGlu4 receptor expressed in human HEK293 cells assessed as potentiation of glutamate-induced calcium mobilization after 1 hr by FLIPR assay
+CHEMBL1780494,Negative allosteric modulation of human mGluR5 expressed in HEK293 cells assessed as inhibition of L-glutamate-induced calcium mobilization by FLIPR assay
+CHEMBL1780496,Positive allosteric modulation of human mGluR5 expressed in HEK293 cells assessed as increase of L-glutamate-induced calcium mobilization by FLIPR assay
+CHEMBL1780498,Displacement of [3H]-MPEP from human mGluR5 expressed in HEK293 cells after 2 hrs
+CHEMBL1810054,Negative allosteric modulation of human mGlu5 receptor expressed in HEK293 cells assessed as inhibition of glutamate-induced calcium mobilization after 1 hr by FLIPR assay
+CHEMBL1810055,Displacement of [3H]-MPEP from human mGluR5 expressed in CHO cells after 60 mins
+CHEMBL1954373,Antagonist activity at human metabotropic glutamate receptor 5
+CHEMBL2016181,Antagonist activity at human mGluR5
+CHEMBL2025194,Antagonist activity at human mGluR5 expressed in CHO-K1 cells assessed as inhibition of glutamate-induced intracellular calcium mobilization
+CHEMBL2065269,Positive allosteric modulation activity at mGlu5 receptor
+CHEMBL2072730,Positive allosteric modulation of human mGluR5 expressed in HEK293A cells assessed as stimulation of glutamate-induced calcium flux by FLIPR method
+CHEMBL2072731,Negative allosteric modulation of human mGluR5 expressed in HEK293A cells assessed as inhibition of glutamate-induced calcium flux by FLIPR method
+CHEMBL2072733,Displacement of [3H]NAM from mGluR5
+CHEMBL2156072,Positive allosteric modulation of human mGluR5 expressed in HEK293 cells assessed as calcium mobilization
+CHEMBL2156622,Antagonist activity at human mGluR5a expressed in mouse L(tk-) cells assessed as inhibition of glutamate-induced Ca2+ influx by FLIPR assay
+CHEMBL2156749,Displacement of [3H]ABP688 from human mGluR5a transmembrane region expressed in mouse L(tk-) cells
+CHEMBL2157266,Positive allosteric modulation of human mGluR5 expressed in recombinant HEK293 cells by FLIPR assay
+CHEMBL2157267,Negative allosteric modulation of human mGluR5 expressed in recombinant HEK293 cells by FLIPR assay
+CHEMBL2166999,Negative allosteric modulation of human recombinant mGluR5 expressed in HEK293 cells expressing GLAST assessed as inhibition of DHPG-induced intracellular Ca2+ level after 30 mins by FLIPR assay
+CHEMBL2167004,Binding affinity to human mGluR5 expressed in HEK293 cell membranes expressing GLAST after 1 hr by scintillation counter in absence of MPEP
+CHEMBL2167005,Binding affinity to human mGluR5 expressed in HEK293 cell membranes expressing GLAST after 1 hr by scintillation counter in presence of 10 nM MPEP
+CHEMBL2167206,Binding affinity to human mGluR5 expressed in HEK293 cell membranes expressing GLAST after 1 hr by scintillation counter in presence of 20 nM MPEP
+CHEMBL2168107,Displacement of [3H]MPEP from human mGluR5 expressed in HEK293 cell membranes expressing GLAST after 1 hr by scintillation counter
+CHEMBL2168108,Displacement of [3H]AZD9272 from human mGluR5 expressed in HEK293 cell membranes expressing GLAST after 1 hr by scintillation counter
+CHEMBL2168314,Binding affinity to human mGluR5 expressed in HEK293 cell membranes expressing GLAST by scintillation counting
+CHEMBL2168560,Negative allosteric modulation of human recombinant mGluR5 expressed in HEK293 cells expressing GLAST assessed as inhibition of glutamate-stimulated IP accumulation incubated for 10 mins prior to glutamate challenge measured 30 mins post glutamate challenge by scintillation counter in presence of [3H]myo-inositol
+CHEMBL2211245,Antagonist activity at human mGluR5
+CHEMBL2215796,Positive allosteric modulation of human mGlu5 receptor expressed in HEK293 cells by fluorescence-based calcium flux assay
+CHEMBL2343303,Displacement of [3H]-ABP688 from human mGluR5 expressed in HEK293 cells after 60 mins by scintillation counting
+CHEMBL2343304,Antagonist activity at human mGluR5 expressed in HEK293 cells assessed as inhibition of Ca2+ mobilization by FLIPR assay
+CHEMBL2344546,Negative allosteric modulation of human recombinant mGlu5 receptor expressed in Syrian hamster AV12 cells assessed as receptor-mediated changes in intracellular calcium concentration by FLIPR assay
+CHEMBL2345731,Antagonist activity at human mGluR5 expressed in HEK293 cells assessed as inhibition of L-glutamate-induced calcium mobilization by FDSS6000 assay
+CHEMBL2345733,Modulation of mGluR5 (unknown origin)
+CHEMBL2350953,Negative allosteric modulation of human mGluR5 expressed in HEK293 cells assessed as calcium mobilization by FLIPR assay
+CHEMBL2405210,Positive allosteric modulation of mGlu5 receptor (unknown origin)
+CHEMBL2405252,Negative allosteric modulation of human mGlu5 receptor expressed in HEK293 cells assessed as inhibition of L-glutamate-induced activity after 1 hr by FLIPR assay
+CHEMBL2405254,Positive allosteric modulation of human mGlu5 receptor expressed in HEK293 cells assessed as potentiation of L-glutamate-induced activity after 1 hr by FLIPR assay
+CHEMBL2410490,Positive allosteric modulation of human mGluR5 expressed in CHO cells assessed as increase of L-quisqualate-induced intracellular cAMP accumulation treated 5 mins before L-quisqualate addition by FLIPR assay
+CHEMBL2410491,Negative allosteric modulation of human mGluR5 expressed in CHO cells assessed as inhibition of L-quisqualate-induced intracellular cAMP accumulation treated 5 mins before L-quisqualate addition by FLIPR assay
+CHEMBL2421143,Negative allosteric modulation of mGlu5 receptor (unknown origin) by cell based assay
+CHEMBL2426830,Positive allosteric modulation of human mGluR5a transfected in HEK293 cells by calcium mobilization assay
+CHEMBL2433294,Positive modulation of human recombinant mGluR5 expressed in HEK293A cells by calcium based FLIPR assay
+CHEMBL2433921,Positive allosteric modulation of human mGluR5 stably expressed in HEK293 cells assessed as Ca2+ flux by FLIPR assay
+CHEMBL2433923,Positive allosteric modulation of human mGluR5 stably expressed in CHO cells assessed as Ca2+ flux by FLIPR assay
+CHEMBL2433924,Positive allosteric modulation of human mGluR5
+CHEMBL2433925,Positive allosteric modulation of mGluR5 (unknown origin)
+CHEMBL2446282,Allosteric modulation of human mGlu5 receptor expressed in HEK cells assessed as effect on glutamate-induced calcium mobilization
+CHEMBL2446290,Displacement of [3H]3-methoxy-5-(pyridin-2-ylethynyl)pyridine from mGlu5 receptor allosteric binding site (unknown origin)
+CHEMBL3089425,Negative allosteric modulation of human mGlu5 receptor expressed in CHO cells assessed as inhibition of L-quisqualate-induced intracellular calcium mobilization preincubated for 5 mins before L-quisqualate addition by FLIPR assay
+CHEMBL3090346,Binding affinity to human mGluR5 by PDSP assay
+CHEMBL3124717,Displacement of [3H]-MPEPy from human mGluR5 expressed in HEK293FT cells after 1 hr by liquid scintillation counting analysis
+CHEMBL3363398,Negative allosteric modulator activity at human mGlu5 assessed as reduction in glutamate-induced calcium mobilization
+CHEMBL3379143,Positive allosteric modulator activity at human mGlu5 receptor
+CHEMBL3412489,Displacement of [3H]MPEP from mGlu5 receptor (unknown origin) expressed in HEK293 cells by competition binding assay
+CHEMBL3412490,Negative allosteric modulation of mGlu5 (unknown origin) expressed in HEK293 cells assessed as inhibition of L-AP4-induced calcium mobilization incubated for 30 mins prior to L-AP4 induction by Fluo-4 AM staining-based fluorescence assay
+CHEMBL3423873,Antagonist activity at human mGluR5 expressed in human embryonic kidney cells assessed as inhibition of L-glutamate-induced calcium release by calcium-5 reagent-based fluorescence assay
+CHEMBL3534986,Inhibition of mGluR5 (unknown origin)
+CHEMBL3599914,Displacement of [3H]MPEP from human cloned mGluR5 receptor expressed in CHO-T-Rex cells after 60 mins by liquid scintillation spectrometry
+CHEMBL3599915,Negative allosteric modulatory activity at human cloned mGluR5 receptor expressed in CHO-T-Rex cells assessed as inhibiton of quisqualate-induced calcium mobilization treated 10 mins prior to agonist application by fluorescence analysis
+CHEMBL3603016,Negative allosteric modulator activity against human mGluR5 expressed in HEK293 cells assessed as inhibition of glutamate-induced inositol phosphate accumulation by IP-one HTRF assay
+CHEMBL3606566,Displacement of [3H]-M-MPEP from human mGlu5 receptor expressed in HEK293 cells after 90 mins by scintillation spectroscopy analysis
+CHEMBL3606567,Negative allosteric modulation at human mGlu5 receptor expressed in HEK293 cells assessed as inhibition of L-quisqualic acid-induced inositol phosphate turnover preincubated for 45 mins before L-quisqualic acid challenge measured after 15 mins by IPone assay
+CHEMBL3607056,Positive allosteric modulation of human mGlu5 receptor expressed in HEK293 cells by calcium mobilization assay
+CHEMBL3636798,Positive allosteric modulation of human mGlu5 expressed in HEK293 cells assessed as calcium mobilization
+CHEMBL3705094,Cell Based Assay: The mGluR5 activity was determined using the metabotropic glutamate receptor activity assays in human embryonic kidney cell.
+CHEMBL3705431,"FLIPR Assay: Activation of the mGluR5 receptor expressed in cell lines results in an increase in intracellular calcium concentration. Using calcium sensitive fluorescent dyes and a suited fluorescence plate reader this functional response is detectable and quantifiable. This technique could be used to characterize pharmacological modifications of the mGluR5 receptor.[Ca]i measurements were performed in HEK293 cells stably expressing the full-length human mGlu5a receptor under the control of a tet-regulated promoter. Cells were cultivated in Dulbecco's modified eagle's medium (DMEM) with 10% fetal calf serum, 100 ug/ml HygromycinB, 500 ug/ml G418 and 2 ug/ml Tetracycline in a 37, 95% humidity and 5% CO2 incubator. Confluent cell cultures were split on a bi-weekly schedule.72 hours prior to the assay run mGluR5a expression was induced by replacing the culture medium by DMEM with 10% fetal calf serum without antibiotics."
+CHEMBL3706069,"Calcium Mobilization Assay: The cDNA for rat metabotropic glutamate receptor 5 (rmGluR5) and the cDNA for human metabotropic glutamate receptor 5 (rmGluR5) were generous gifts from S. Nakanishi (Kyoto University, Kyoto, Japan). The rmGluR5 or rmGluR5 was stably expressed in a HEK 293 cell line and grown in Dulbecco's Modified Eagle Medium (DMEM) (Invitrogen, Carlsbad, Calif.) with supplements (10% bovine calf serum, 4 mM glutamine, 100 units/mL penicillin, 100 ug/mL streptomycin and 0.75 mM G1418) at 37 C., 5% CO2. Twenty-four hours prior to assay, cells were seeded into 384-well black wall microtiter plates coated with poly-D-lysine. Just prior to assay, media was aspirated and cells dye-loaded (25 uL/well) with 3 uM Fluo-4/0.01% pluronic acid in assay buffer (Hank's Balanced Saline Solution (HBSS)): 150 mM NaCl, 5 mM KCl, 1 mM CaCl2, 1 mM MgCl2, plus 20 mM N-2-Hydroxyethylpiperazine-N'-2-ethanesulfonic acid (HEPES), pH 7.4, 0.1% bovine serum albumin (BSA) and 2.5 mM probenicid)."
+CHEMBL3706070,"Radioligand Binding Assay: Binding assays were performed as described in [J. A. O'Brien et al. Mol. Pharmacol., 2003, 64, 731-740] with slight modifications, including that a radioligand that binds to the methyl-5-(2-pyridinylethynyl)pyridine (MPEP) binding site was used in place of [3H]-MPEP. Briefly, after thawing, the membrane homogenates were resuspended in 50 mM Tris-HCl and 0.9% NaCl binding buffer at pH 7.4 to a final assay concentration of 20 ug is protein/well for radioligand filtration binding. Incubations included 5 nM radioligand, membranes and either buffer or varying concentrations of compound. Samples were incubated for 60 min at room temperature with shaking. Non-specific binding was defined with 10 uM cold MPEP when using the radioligand. After incubation, samples were filtered over a GF/C filter (presoaked in 0.25% polyethyleneimine (PEI)) and then washed 4 times using a Tomtec Harvester 96 Mach III cell harvester (Tomtec, Hamden, Conn.) with 0.5 mL ice-cold 50 mM Tris-HCl."
+CHEMBL3706272,"Fluorometric Imaging Plate Reader (FLIPR) Assay: Activity of compounds of the present invention was examined by determination to what extent the glutamate-induced elevation of the intracellular calcium concentration in L(tk-) cells expressing human mGluR5a receptors (see L. P. Daggett et al., Neuropharm. Vol. 34, pages 871-886, 1995) is inhibited by utilizing methods as described e.g. by L. P. Daggett et al., Neuropharm. Vol. 34, pages 871-886 (1995) and P. J. Flor et al., J. Neurochem. Vol. 67, pages 58-63 (1996). Activity of compounds of the present invention with respect to mGluR1 antagonism was examined by an assay based on measurements of L-glutamate induced intracellular calcium increases using a 96 well plate-based Fluorometric Imaging Plate Reader (FLIPR)."
+CHEMBL3707570,"Metabotropic Glutamate Receptor Activity Assay: The utility of the compounds in accordance with the present invention as negative allosteric modulators of metabotropic glutamate receptor activity, in particular mGluR5 activity, can be demonstrated by methodology known in the art. Human embryonic kidney (HEK) cells transfected with rat or human mGluR5 were plated in clear bottom assay plates for assay in a Functional Drug Screening System (FDSS). The cells were loaded with a Ca2+-sensitive fluorescent dye (e.g., Fluo-4), and the plates were washed and placed in the FDSS instrument. Test compound was applied to cells 3 seconds after baseline readings were taken. Cells were incubated with the test compounds for 140 seconds and then stimulated with an EC20 concentration of an mGluR5 agonist (e.g., glutamate, 3,5-dihydroxyphenylglycine, or quisqualate); 60-80 seconds later an EC80 concentration of agonist was added and readings taken for an additional 40 seconds. Data were collected at 1 Hz. Negative allosteric modulation of the agonist."
+CHEMBL3707928,Cell Based Assay: mGluR5 activity was determined in a cell-based assay.
+CHEMBL3737385,Positive allosteric modification of human recombinant mGlu5 receptor expressed in U2OS cells assessed as potentiation of glutamate-induced Ca2+ flux in presence of EC20 glutamate
+CHEMBL3744478,Antagonist activity at mGlu5 receptor (unknown origin) expressed in HEK cells assessed as inhibition of glutamate-induced calcium flux by fluorescence based assay
+CHEMBL3749855,Positive allosteric modulation of human mGlu5 expressed in HEK293 cells assessed as glutamate-induced calcium mobilization
+CHEMBL3761220,Displacement of [3H]-M-MPEP from mGluR5 StaR domain (569 to 836 residues) (unknown origin) expressed in HEK293 cell membranes
+CHEMBL3761222,Antagonist activity at human mGluR5d by fluo-3-based FLIPR assay
+CHEMBL3761226,Antagonist activity at human mGluR5 expressed in CHO cells assessed as inhibition of glutamate-induced effect by aequorin bioluminescence assay
+CHEMBL3761228,Antagonist activity at mGluR5 (unknown origin)
+CHEMBL3768172,Displacement of [3H]MPEP from recombinant human mGluR5a expressed in A18 cells measured after 1 hr
+CHEMBL3768175,Displacement of [3H]-MPEP from human mGlu5 receptor expressed in HEK293 cell membranes after 1 hr by scintillation counting analysis
+CHEMBL3807497,Positive allosteric modulation of human mGlu5A receptor expressed in HEK293 cells coexpressing rat glutamate-aspartate transporter assessed as potentiation of L-glutamate-induced Ca2+ signal incubated for 60 mins by calcium 4 dye based FLIPR assay
+CHEMBL3807498,Displacement of [3H]MPEPgamma in mGlu5 receptor (unknown origin) incubated for 60 mins by liquid scintillation counting method
+CHEMBL3807499,Displacement of [3H]MPEP in mGlu5 receptor (unknown origin) incubated for 60 mins by liquid scintillation counting method
+CHEMBL3865444,Positive allosteric modulation of mGlu5 receptor (unknown origin) assessed as increase in L-glutamate-induced calcium release after 60 mins by cell based FLIPR assay
+CHEMBL3865452,Displacement of [3H]-MethoxyPEPy from human mGlu5 receptor expressed in HEK293 cell membranes after 8 hrs by micro beta scintillation counting analysis
+CHEMBL3869979,Positive allosteric modulation activity at human mGluR5A expressed in HEK293(ZF) cells co-expressing rat glutamate-aspartate transporter assessed as increase in L-glutamate-induced Ca2+ flux preincubated for 60 mins followed by L-glutamate addition measured for 100 sec by calcium-4 dye based FLIPR assay
+CHEMBL3869980,Displacement of [3H]MPEPy from human mGluR5 expressed in cell membranes after 60 mins by liquid scintillation counting method
+CHEMBL3880823,Antagonist activity against human mGluR5d expressed in cells by fluo-3 dye based FLIPR assay
+CHEMBL3996882,Negative allosteric modulation of human mGlu5a receptor expressed in HEK293 cells co-expressing EAAC1 assessed as inhibition of quisqualate-induced intracellular calcium accumulation preincubated for 5 mins followed by quisqualate addition by Flou-4-AM dye based FLIPR assay
+CHEMBL3996884,Negative allosteric modulation of mGlu5 receptor (unknown origin)
+CHEMBL4008946,Displacement of [3H]M-MPEP from recombinant human mGluR5a expressed in human A18 cell membrane homogenate after 60 mins
+CHEMBL4008950,Negative allosteric modulation of human mGluR5a expressed in CHO cells assessed as reduction in DHPG-induced cytosolic Ca2+ influx after 10 to 20 mins by fluo-4/AM-dye based fluorometric analysis
+CHEMBL4008979,Displacement of [3H]R21412 from mGluR5 in male human post mortem parietal cortical tissue after 30 mins by scintillation counting method
+CHEMBL4008980,Displacement of [3H]R21412 from mGluR5 in female human post mortem parietal cortical tissue after 30 mins by scintillation counting method
+CHEMBL4009028,Displacement of [3H]R21412 from recombinant human mGluR5a expressed in human A18 cell membrane homogenate
+CHEMBL4019145,Displacement of [3H]MPEPy from human mGlu5 expressed in HEK293FT cell membranes after 1 hr by liquid scintillation counting
+CHEMBL4039257,Negative allosteric modulation of human mGlu5 receptor expressed in HEK293 cells assessed as inhibition of glutamate induced-calcium mobilization preincubated for 2.3 mins followed by glutamate addition measured after 1.9 mins by Fluo-4 AM dye based fluorescence assay
+CHEMBL4046782,Negative allosteric modulation of human recombinant mGluR5 expressed in HEK293 cells assessed as inhibition of glutamate-induced calcium mobilization preincubated for 2 mins followed glutamate addition measured by fluorescence assay
+CHEMBL4053750,Displacement of [3H]M-MPEP from mGluR5 (unknown origin) measured after 60 mins
+CHEMBL4157622,Displacement of MPEP from mGluR5 (unknown origin) after 3 hrs by liquid scintillation counting method
+CHEMBL4236719,Displacement of [3H]MPEP from recombinant mGluR5 (unknown origin) expressed in HEK293T cell membranes after 1 hr by liquid scintillation counting
+CHEMBL4236720,Displacement of [3H]MPEP from recombinant mGluR5a (unknown origin) expressed in HEK293T cell membranes co-expressing human dopamine D2 receptor after 1 hr by liquid scintillation counting
+CHEMBL4236723,Antagonist activity at mGluR5 (unknown origin) expressed in HEK293T cells assessed as inhibition of L-Glu-induced MAPK phosphorylation preincubated for 30 mins followed by agonist stimulation for 10 mins by Western blot analysis
+CHEMBL4310573,Negative allosteric modulation of human mGlu5 receptor assessed as inhibition of glutamate induced-calcium mobilization
+CHEMBL4320878,Inhibition of mGLU5 (unknown origin)
+CHEMBL4369707,Allosteric agonist activity at human mGlu5 expressed in CHO cells assessed as reduction in forskolin-induced cAMP production after 30 mins by cAMP reagent-based assay
+CHEMBL4413470,Displacement of [3H]MPEP from human mGlu5 receptor expressed in CHO-TREx cell membranes after 60 mins by liquid scintillation spectrometric analysis
+CHEMBL4413473,Negative allosteric modulation of human mGlu5 receptor expressed in CHO-TREx cell membranes assessed as reduction in quisqualate-induced Ca2+ mobilization incubated for 18 hrs and measured every 1.5 secs intervals for 60 secs by Fluo-4/AM dye-based fluorescence analysis
+CHEMBL4427245,Negative allosteric modulation of human recombinant mGluR5 expressed in HEK293 cells assessed as L-glutamate-induced intracellular calcium mobilization incubated for 20 mins before L-glutamate addition
+CHEMBL4479790,Agonist activity at human mGluR5A transfected in HEK293 cells assessed as induction of calcium release by FLIPR assay
+CHEMBL4479791,Positive allosteric modulation of human mGluR5A transfected in HEK293 cells assessed as potentiation of L-glutamate-induced calcium release incubated for 10 mins by FLIPR assay
+CHEMBL4479793,Displacement of [3H]-MPEPy from human mGluR5A transfected in HEK293 cell membranes after 60 mins by microbeta liquid scintillation counting analysis
+CHEMBL4479797,Displacement of [3H]-MPEP from human mGluR5A transfected in HEK293 cells after 60 mins by microbeta liquid scintillation counting analysis
+CHEMBL4479800,Negative allosteric modulation of human mGluR5A transfected in HEK293 cells assessed as inhibition of L-glutamate-induced calcium release after 10 mins by FLIPR assay
+CHEMBL4688231,Positive allosteric modulation of mGluR5 (unknown origin) by calcium mobilization assay
+CHEMBL828431,In vitro potency against human recombinant mGlu5 receptor was determined by [Ca2+] flux assay using glutamate as agonist
+CHEMBL828680,Inhibitory concentration against human recombinant metabotropic glutamate receptor 5 (mGlu5) in Ltk cells determined using fluorescence detection method
+CHEMBL829868,Effective concentration against metabotropic glutamate receptor 5 of human transfected into CHO cells
+CHEMBL833257,Inhibitory concentration towards human glutamate receptor 5 in calcium flux assay
+CHEMBL856303,Activity at human mGluR5d assessed as inhibition of glutamate-induced calcium influx by FLIPR assay
+CHEMBL860564,Inhibition of glutamate-induced calcium influx in human mGluR5d by FLIPR
+CHEMBL860880,Displacement of [3H]MPEP from recombinant human mGlu5 receptor
+CHEMBL860999,Inhibition of mGlu5 receptor by FLIPR
+CHEMBL862887,Displacement of [3H]MPEP from cloned human mGluR5 transfected in HEK293-T cells
+CHEMBL864050,Activity in agonist-induced phosphoinositide hydrolysis in CHO cells expressing mGluR5a
+CHEMBL864285,Activity at human mGluR5 assessed as effect on glutamate-induced calcium ion mobilization by FLIPR
+CHEMBL865368,Antagonist activity against mGluR5 expressed in CHO cells assessed as inhibition of agonist-induced phosphoinositide hydrolysis
+CHEMBL865700,Inhibition of glutamate-induced calcium influx in human mGluR5d by FLIPR
+CHEMBL871882,In vitro inhibitory concentration against Ca+2 flux mediated by human mGlu5 receptor expressed in Ltk cells using fura-2 dye
+CHEMBL873552,In vitro potency against calcium flux in Ltk cells expressing human recombinant metabotropic glutamate receptor 5 using fluorescence detection
+CHEMBL888252,Antagonist activity at human mGluR5 receptor expressed in 132N1 cells assessed as inhibition of glutamate-induced calcium flux by FLIPR assay
+CHEMBL888663,Antagonist activity at human mGluR5 receptor expressed in CHOK1 cells assessed as inhibition of glutamate-mediated internal calcium mobilization
+CHEMBL899860,Antagonist activity at human mGluR5b expressed in HEK293 cells assessed by measuring intracellular calcium by FLIPR assay
+CHEMBL903194,Activity at human mGluR5 expressed in CHO cells assessed as potentiation of glutamate response by FLIPR assay
+CHEMBL914081,Displacement of [3H]M-MPEP from human mGluR5 receptor expressed in L (tk-) cells
+CHEMBL914082,Displacement of [3H]ABP688 from human mGluR5 receptor expressed in L (tk-) cells
+CHEMBL914094,Activity at human recombinant mGluR5 expressed in L(tk-) cells assessed as inhibition of quisqualate-induced phosphoinositol accumulation
+CHEMBL914095,Activity at human recombinant mGluR5 expressed in L(tk-) cells assessed as inhibition of glutamate-induced calcium release
+CHEMBL916420,Antagonist activity at human mGluR5 expressed in 1321N1 cells assessed as effect on L-glutamate-induced calcium mobilization
+CHEMBL927734,Antagonist activity at human mGluR5 expressed in CHO cells assessed as L-glutamate induced potentiation of intracellular calcium level by FLIPR assay
+CHEMBL934506,Antagonist activity at human mGluR5 expressed in CHO cells assessed as increase in intracellular calcium level by FLIPR
