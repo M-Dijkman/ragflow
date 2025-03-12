@@ -1,3 +1,6 @@
+#
+#  Copyright 2025 The InfiniFlow Authors. All Rights Reserved.
+#
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
 #  You may obtain a copy of the License at
@@ -11,11 +14,12 @@
 #  limitations under the License.
 #
 
+import logging
 from io import BytesIO
 from pptx import Presentation
 
 
-class RAGFlowPptParser(object):
+class RAGFlowPptParser:
     def __init__(self):
         super().__init__()
 
@@ -53,9 +57,12 @@ class RAGFlowPptParser(object):
             texts = []
             for shape in sorted(
                     slide.shapes, key=lambda x: ((x.top if x.top is not None else 0) // 10, x.left)):
-                txt = self.__extract(shape)
-                if txt:
-                    texts.append(txt)
+                try:
+                    txt = self.__extract(shape)
+                    if txt:
+                        texts.append(txt)
+                except Exception as e:
+                    logging.exception(e)
             txts.append("\n".join(texts))
 
         return txts

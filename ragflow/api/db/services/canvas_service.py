@@ -14,6 +14,7 @@
 #  limitations under the License.
 #
 import json
+import time
 import traceback
 from uuid import uuid4
 from agent.canvas import Canvas
@@ -55,36 +56,38 @@ def completion(tenant_id, agent_id, question, session_id=None, stream=True, **kw
     e, cvs = UserCanvasService.get_by_id(agent_id)
     assert e, "Agent not found."
     assert cvs.user_id == tenant_id, "You do not own the agent."
-
-    if not isinstance(cvs.dsl, str):
+    if not isinstance(cvs.dsl,str):
         cvs.dsl = json.dumps(cvs.dsl, ensure_ascii=False)
     canvas = Canvas(cvs.dsl, tenant_id)
     canvas.reset()
     message_id = str(uuid4())
-
     if not session_id:
-        session_id = get_uuid()
+        query = canvas.get_preset_param()
+        if query:
+            for ele in query:
+                if not ele["optional"]:
+                    if not kwargs.get(ele["key"]):
+                        assert False, f"`{ele['key']}` is required"
+                    ele["value"] = kwargs[ele["key"]]
+                if ele["optional"]:
+                    if kwargs.get(ele["key"]):
+                        ele["value"] = kwargs[ele['key']]
+                    else:
+                        if "value" in ele:
+                            ele.pop("value")
+        cvs.dsl = json.loads(str(canvas))
+        session_id=get_uuid()
         conv = {
             "id": session_id,
             "dialog_id": cvs.id,
-            "user_id": kwargs.get("user_id", ""),
+            "user_id": kwargs.get("user_id", "") if isinstance(kwargs, dict) else "",
+            "message": [{"role": "assistant", "content": canvas.get_prologue(), "created_at": time.time()}],
             "source": "agent",
-            "dsl": json.loads(cvs.dsl)
+            "dsl": cvs.dsl
         }
         API4ConversationService.save(**conv)
-        if canvas.get_preset_param():
-            yield "data:" + json.dumps({"code": 0,
-                                    "message": "",
-                                    "data": {
-                                        "session_id": session_id,
-                                        "answer": "",
-                                        "reference": [],
-                                        "param": canvas.get_preset_param()
-                                      }
-                                    },
-                                   ensure_ascii=False) + "\n\n"
-            yield "data:" + json.dumps({"code": 0, "message": "", "data": True}, ensure_ascii=False) + "\n\n"
-            return
+
+        
         conv = API4Conversation(**conv)
     else:
         e, conv = API4ConversationService.get_by_id(session_id)
@@ -104,7 +107,6 @@ def completion(tenant_id, agent_id, question, session_id=None, stream=True, **kw
         conv.reference.append({"chunks": [], "doc_aggs": []})
 
     final_ans = {"reference": [], "content": ""}
-
     if stream:
         try:
             for ans in canvas.run(stream=stream):
@@ -116,12 +118,12 @@ def completion(tenant_id, agent_id, question, session_id=None, stream=True, **kw
                     continue
                 for k in ans.keys():
                     final_ans[k] = ans[k]
-                ans = {"answer": ans["content"], "reference": ans.get("reference", [])}
+                ans = {"answer": ans["content"], "reference": ans.get("reference", []), "param": canvas.get_preset_param()}
                 ans = structure_answer(conv, ans, message_id, session_id)
                 yield "data:" + json.dumps({"code": 0, "message": "", "data": ans},
                                            ensure_ascii=False) + "\n\n"
 
-            canvas.messages.append({"role": "assistant", "content": final_ans["content"], "id": message_id})
+            canvas.messages.append({"role": "assistant", "content": final_ans["content"], "created_at": time.time(), "id": message_id})
             canvas.history.append(("assistant", final_ans["content"]))
             if final_ans.get("reference"):
                 canvas.reference.append(final_ans["reference"])
@@ -146,7 +148,7 @@ def completion(tenant_id, agent_id, question, session_id=None, stream=True, **kw
                 canvas.reference.append(final_ans["reference"])
             conv.dsl = json.loads(str(canvas))
 
-            result = {"answer": final_ans["content"], "reference": final_ans.get("reference", [])}
+            result = {"answer": final_ans["content"], "reference": final_ans.get("reference", []) , "param": canvas.get_preset_param()}
             result = structure_answer(conv, result, message_id, session_id)
             API4ConversationService.append_message(conv.id, conv.to_dict())
             yield result

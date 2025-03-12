@@ -28,11 +28,14 @@ interface IProps extends Partial<IRemoveMessageById>, IRegenerateMessage {
   reference: IReference;
   loading?: boolean;
   sendLoading?: boolean;
+  visibleAvatar?: boolean;
   nickname?: string;
   avatar?: string;
+  avatarDialog?: string | null;
   clickDocumentButton?: (documentId: string, chunk: IReferenceChunk) => void;
   index: number;
   showLikeButton?: boolean;
+  showLoudspeaker?: boolean;
 }
 
 const MessageItem = ({
@@ -40,12 +43,15 @@ const MessageItem = ({
   reference,
   loading = false,
   avatar,
+  avatarDialog,
   sendLoading = false,
   clickDocumentButton,
   index,
   removeMessageById,
   regenerateMessage,
   showLikeButton = true,
+  showLoudspeaker = true,
+  visibleAvatar = true,
 }: IProps) => {
   const { theme } = useTheme();
   const isAssistant = item.role === MessageType.Assistant;
@@ -101,11 +107,15 @@ const MessageItem = ({
             [styles.messageItemContentReverse]: item.role === MessageType.User,
           })}
         >
-          {item.role === MessageType.User ? (
-            <Avatar size={40} src={avatar ?? '/logo.svg'} />
-          ) : (
-            <AssistantIcon></AssistantIcon>
-          )}
+          {visibleAvatar &&
+            (item.role === MessageType.User ? (
+              <Avatar size={40} src={avatar ?? '/logo.svg'} />
+            ) : avatarDialog ? (
+              <Avatar size={40} src={avatarDialog} />
+            ) : (
+              <AssistantIcon />
+            ))}
+
           <Flex vertical gap={8} flex={1}>
             <Space>
               {isAssistant ? (
@@ -116,6 +126,7 @@ const MessageItem = ({
                     prompt={item.prompt}
                     showLikeButton={showLikeButton}
                     audioBinary={item.audio_binary}
+                    showLoudspeaker={showLoudspeaker}
                   ></AssistantGroupButton>
                 )
               ) : (
@@ -165,6 +176,7 @@ const MessageItem = ({
                           documentId={item.doc_id}
                           documentName={item.doc_name}
                           prefix="document"
+                          link={item.url}
                         >
                           {item.doc_name}
                         </NewDocumentLink>

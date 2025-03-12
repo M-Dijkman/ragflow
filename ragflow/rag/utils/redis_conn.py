@@ -1,12 +1,29 @@
+#
+#  Copyright 2025 The InfiniFlow Authors. All Rights Reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+
 import logging
 import json
+import uuid
 
 import valkey as redis
 from rag import settings
 from rag.utils import singleton
+from valkey.lock import Lock
 
-
-class Payload:
+class RedisMsg:
     def __init__(self, consumer, queue_name, group_name, msg_id, message):
         self.__consumer = consumer
         self.__queue_name = queue_name
@@ -24,6 +41,9 @@ class Payload:
 
     def get_message(self):
         return self.__message
+
+    def get_msg_id(self):
+        return self.__msg_id
 
 
 @singleton
@@ -188,9 +208,8 @@ class RedisDB:
                 )
         return False
 
-    def queue_consumer(
-        self, queue_name, group_name, consumer_name, msg_id=b">"
-    ) -> Payload:
+    def queue_consumer(self, queue_name, group_name, consumer_name, msg_id=b">") -> RedisMsg:
+        """https://redis.io/docs/latest/commands/xreadgroup/"""
         try:
             group_info = self.REDIS.xinfo_groups(queue_name)
             if not any(e["name"] == group_name for e in group_info):
@@ -199,15 +218,17 @@ class RedisDB:
                 "groupname": group_name,
                 "consumername": consumer_name,
                 "count": 1,
-                "block": 10000,
+                "block": 5,
                 "streams": {queue_name: msg_id},
             }
             messages = self.REDIS.xreadgroup(**args)
             if not messages:
                 return None
             stream, element_list = messages[0]
+            if not element_list:
+                return None
             msg_id, payload = element_list[0]
-            res = Payload(self.REDIS, queue_name, group_name, msg_id, payload)
+            res = RedisMsg(self.REDIS, queue_name, group_name, msg_id, payload)
             return res
         except Exception as e:
             if "key" in str(e):
@@ -221,30 +242,24 @@ class RedisDB:
                 )
         return None
 
-    def get_unacked_for(self, consumer_name, queue_name, group_name):
+    def get_unacked_iterator(self, queue_name, group_name, consumer_name):
         try:
             group_info = self.REDIS.xinfo_groups(queue_name)
             if not any(e["name"] == group_name for e in group_info):
                 return
-            pendings = self.REDIS.xpending_range(
-                queue_name,
-                group_name,
-                min=0,
-                max=10000000000000,
-                count=1,
-                consumername=consumer_name,
-            )
-            if not pendings:
-                return
-            msg_id = pendings[0]["message_id"]
-            msg = self.REDIS.xrange(queue_name, min=msg_id, count=1)
-            _, payload = msg[0]
-            return Payload(self.REDIS, queue_name, group_name, msg_id, payload)
+            current_min = 0
+            while True:
+                payload = self.queue_consumer(queue_name, group_name, consumer_name, current_min)
+                if not payload:
+                    return
+                current_min = payload.get_msg_id()
+                logging.info(f"RedisDB.get_unacked_iterator {consumer_name} msg_id {current_min}")
+                yield payload
         except Exception as e:
             if "key" in str(e):
                 return
             logging.exception(
-                "RedisDB.get_unacked_for " + consumer_name + " got exception: " + str(e)
+                "RedisDB.get_unacked_iterator " + consumer_name + " got exception: "
             )
             self.__open__()
 
@@ -262,3 +277,26 @@ class RedisDB:
 
 
 REDIS_CONN = RedisDB()
+
+
+class RedisDistributedLock:
+    def __init__(self, lock_key, lock_value=None, timeout=10, blocking_timeout=1):
+        self.lock_key = lock_key
+        if lock_value:
+            self.lock_value = lock_value
+        else:
+            self.lock_value = str(uuid.uuid4())
+        self.timeout = timeout
+        self.lock = Lock(REDIS_CONN.REDIS, lock_key, timeout=timeout, blocking_timeout=blocking_timeout)
+
+    def acquire(self):
+        return self.lock.acquire()
+
+    def release(self):
+        return self.lock.release()
+
+    def __enter__(self):
+        self.acquire()
+
+    def __exit__(self, exception_type, exception_value, exception_traceback):
+        self.release()

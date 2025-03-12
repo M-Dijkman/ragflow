@@ -38,8 +38,12 @@ const KnowledgeList = () => {
     handleInputChange,
     loading,
   } = useInfiniteFetchKnowledgeList();
-  console.log('🚀 ~ KnowledgeList ~ data:', data);
-  const nextList = data?.pages?.flatMap((x) => x.kbs) ?? [];
+
+  const nextList = useMemo(() => {
+    const list =
+      data?.pages?.flatMap((x) => (Array.isArray(x.kbs) ? x.kbs : [])) ?? [];
+    return list;
+  }, [data?.pages]);
 
   const total = useMemo(() => {
     return data?.pages.at(-1).total ?? 0;
@@ -80,7 +84,7 @@ const KnowledgeList = () => {
           next={fetchNextPage}
           hasMore={hasNextPage}
           loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
-          endMessage={total && <Divider plain>{t('noMoreData')} 🤐</Divider>}
+          endMessage={!!total && <Divider plain>{t('noMoreData')} 🤐</Divider>}
           scrollableTarget="scrollableDiv"
         >
           <Flex
@@ -89,9 +93,12 @@ const KnowledgeList = () => {
             className={styles.knowledgeCardContainer}
           >
             {nextList?.length > 0 ? (
-              nextList.map((item: any) => {
+              nextList.map((item: any, index: number) => {
                 return (
-                  <KnowledgeCard item={item} key={item.name}></KnowledgeCard>
+                  <KnowledgeCard
+                    item={item}
+                    key={`${item?.name}-${index}`}
+                  ></KnowledgeCard>
                 );
               })
             ) : (

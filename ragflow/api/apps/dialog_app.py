@@ -18,6 +18,7 @@ from flask import request
 from flask_login import login_required, current_user
 from api.db.services.dialog_service import DialogService
 from api.db import StatusEnum
+from api.db.services.llm_service import TenantLLMService
 from api.db.services.knowledgebase_service import KnowledgebaseService
 from api.db.services.user_service import TenantService, UserTenantService
 from api import settings
@@ -41,8 +42,6 @@ def set_dialog():
         req["rerank_id"] = ""
     similarity_threshold = req.get("similarity_threshold", 0.1)
     vector_similarity_weight = req.get("vector_similarity_weight", 0.3)
-    if vector_similarity_weight is None:
-        vector_similarity_weight = 0.3
     llm_setting = req.get("llm_setting", {})
     default_prompt = {
         "system": """你是一个智能助手，请总结知识库的内容来回答问题，请列举知识库中的数据详细回答。当所有知识库内容都与问题无关时，你的回答必须包括“知识库中未找到您要的答案！”这句话。回答需要考虑聊天历史。
@@ -59,11 +58,6 @@ def set_dialog():
 
     if not prompt_config["system"]:
         prompt_config["system"] = default_prompt["system"]
-    # if len(prompt_config["parameters"]) < 1:
-    #     prompt_config["parameters"] = default_prompt["parameters"]
-    # for p in prompt_config["parameters"]:
-    #     if p["key"] == "knowledge":break
-    # else: prompt_config["parameters"].append(default_prompt["parameters"][0])
 
     for p in prompt_config["parameters"]:
         if p["optional"]:
@@ -76,22 +70,19 @@ def set_dialog():
         e, tenant = TenantService.get_by_id(current_user.id)
         if not e:
             return get_data_error_result(message="Tenant not found!")
-        kbs = KnowledgebaseService.get_by_ids(req.get("kb_ids"))
-        embd_count = len(set([kb.embd_id for kb in kbs]))
-        if embd_count != 1:
+        kbs = KnowledgebaseService.get_by_ids(req.get("kb_ids", []))
+        embd_ids = [TenantLLMService.split_model_name_and_factory(kb.embd_id)[0] for kb in kbs]  # remove vendor suffix for comparison
+        embd_count = len(set(embd_ids))
+        if embd_count > 1:
             return get_data_error_result(message=f'Datasets use different embedding models: {[kb.embd_id for kb in kbs]}"')
 
         llm_id = req.get("llm_id", tenant.llm_id)
         if not dialog_id:
-            if not req.get("kb_ids"):
-                return get_data_error_result(
-                    message="Fail! Please select knowledgebase!")
-
             dia = {
                 "id": get_uuid(),
                 "tenant_id": current_user.id,
                 "name": name,
-                "kb_ids": req["kb_ids"],
+                "kb_ids": req.get("kb_ids", []),
                 "description": description,
                 "llm_id": llm_id,
                 "llm_setting": llm_setting,
@@ -105,10 +96,7 @@ def set_dialog():
             }
             if not DialogService.save(**dia):
                 return get_data_error_result(message="Fail to new a dialog!")
-            e, dia = DialogService.get_by_id(dia["id"])
-            if not e:
-                return get_data_error_result(message="Fail to new a dialog!")
-            return get_json_result(data=dia.to_json())
+            return get_json_result(data=dia)
         else:
             del req["dialog_id"]
             if "kb_names" in req:
@@ -119,6 +107,7 @@ def set_dialog():
             if not e:
                 return get_data_error_result(message="Fail to update a dialog!")
             dia = dia.to_dict()
+            dia.update(req)
             dia["kb_ids"], dia["kb_names"] = get_kb_names(dia["kb_ids"])
             return get_json_result(data=dia)
     except Exception as e:

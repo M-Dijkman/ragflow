@@ -57,6 +57,7 @@ export interface IConversation {
   create_time: number;
   dialog_id: string;
   id: string;
+  avatar: string;
   message: Message[];
   reference: IReference[];
   name: string;
@@ -106,6 +107,7 @@ export interface Docagg {
   count: number;
   doc_id: string;
   doc_name: string;
+  url?: string;
 }
 
 // interface Chunk {

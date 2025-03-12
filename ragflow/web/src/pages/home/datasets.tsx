@@ -24,7 +24,7 @@ export function Datasets() {
             {list.slice(0, 3).map((dataset) => (
               <Card
                 key={dataset.id}
-                className="bg-colors-background-inverse-weak flex-1 border-colors-outline-neutral-standard"
+                className="bg-colors-background-inverse-weak flex-1 border-colors-outline-neutral-standard max-w-96"
               >
                 <CardContent className="p-4">
                   <div className="flex justify-between mb-4">
@@ -58,7 +58,7 @@ export function Datasets() {
                     <Button
                       variant="icon"
                       size="icon"
-                      onClick={navigateToDataset}
+                      onClick={navigateToDataset(dataset.id)}
                     >
                       <ChevronRight className="h-6 w-6" />
                     </Button>
