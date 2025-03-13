@@ -30,7 +30,7 @@ def query(chembl_aids):
     sql = f"""
     SELECT
         ASSAYS.chembl_id,
-        ASSAYS.description
+        ASSAYS.assay_type
     FROM ASSAYS
     WHERE ASSAYS.chembl_id IN {tuple(chembl_aids)}
     """
@@ -42,12 +42,12 @@ def query(chembl_aids):
 
 if __name__ == "__main__":
     #juiste input file (wat je al uit papyrus  had gehaald)
-    df = pd.read_csv("AssayCTX/data/mGluR5_v1.tsv", sep="\t")
+    df = pd.read_csv("AssayCTX/data/hERG_Dataset.tsv", sep="\t")
     chembl_aids = get_assays(df)
     chembl_info = query(chembl_aids)
     #assay_info = topic_information(chembl_aids)
 
-    #chembl_info.to_csv("chembl_info.csv", index=False)
+    chembl_info.to_csv("chembl_info.csv", index=False)
     #assay_info.to_csv("assay_info.csv", index=False)
 
 
