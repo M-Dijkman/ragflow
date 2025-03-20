@@ -46,7 +46,7 @@ def query(chembl_aids):
 
 if __name__ == "__main__":
     # Laad de originele dataset
-    df = pd.read_csv("AssayCTX/data/hERG_Dataset.tsv", sep="\t")
+    df = pd.read_csv("AssayCTX/data/OATP1b1_Dataset.tsv", sep="\t")
 
     # Ophalen van CHEMBL ID's
     chembl_aids = get_assays(df)
@@ -72,4 +72,4 @@ if __name__ == "__main__":
     filtered_df = merged_df[merged_df["assay_type"] != "F"]
 
     # Schrijf het gefilterde bestand weg
-    filtered_df.to_csv("AssayCTX/data/hERG_Dataset_filtered.tsv", sep="\t", index=False)
+    filtered_df.to_csv("AssayCTX/data/OATP1b1_Dataset_filtered.tsv", sep="\t", index=False)
