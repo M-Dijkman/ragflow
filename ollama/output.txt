@@ -1,0 +1,6 @@
+Query: Which database was used for the multiple sequence alignment (MSA) searches in AlphaFold?
+Error: Embedding dimension 8192 does not match collection dimensionality 4096
+Query: What were the results of AlphaFold's performance in CASP14?
+Error: Embedding dimension 8192 does not match collection dimensionality 4096
+Query: What are the main components of AlphaFold’s neural network architecture?
+Error: Embedding dimension 8192 does not match collection dimensionality 4096
